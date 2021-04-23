@@ -9,8 +9,8 @@
     <Grid>
         <ContentControl MouseDoubleClick="Price_OnMouseDoubleClick">
             <StackPanel Height="40" Orientation="Horizontal" Background="White">
-                <Label Content="{Binding Name}" Margin="5" MinWidth="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <Label Content="{Binding Price}" Margin="5" MinWidth="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Label Content="{Binding Name}" Margin="5" MinWidth="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
+                <Label Content="{Binding Price}" Margin="5" MinWidth="100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
                     <Label.Style>
                         <Style TargetType="Label">
                             <Style.Triggers>
