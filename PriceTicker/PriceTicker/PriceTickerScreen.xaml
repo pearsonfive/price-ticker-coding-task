@@ -1,0 +1,29 @@
+﻿<Window x:Class="PriceTicker.PriceTickerScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PriceTicker"
+        mc:Ignorable="d"
+        Title="Price Ticker Screen" Height="200" Width="400">
+
+    <Window.DataContext>
+        <local:PriceTickerScreenViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" MinHeight="20" Background="CornflowerBlue" VerticalAlignment="Center">
+            <Label Foreground="White" VerticalContentAlignment="Center" FontSize="16" FontWeight="DemiBold">Prices</Label>
+        </StackPanel>
+        <ListView Grid.Row="1" Margin="2" ItemsSource="{Binding AssetViewModels}" BorderThickness="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:SinglePriceControl/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>
